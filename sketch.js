@@ -69,10 +69,6 @@ function draw() {
   if (arrowGroup.isTouching(redB)) {
     
     redB.destroyEach();
-    redB.destroy();
-    redB.Each();
-    ballon.destroyEach();
-    
     arrowGroup.destroyEach();
     score=score+1;
   }
@@ -138,17 +134,13 @@ function pinkBalloon() {
 
 // Creating  arrows for bow
  function createArrow() {
-  var arrow= createSprite(100, 100, 60, 10);
+  arrow= createSprite(100, 100, 60, 10);
   arrow.addImage(arrowImage);
   arrow.x = 360;
   arrow.y=bow.y;
   arrow.velocityX = -4;
   arrow.lifetime = 100;
   arrow.scale = 0.3;
-  
-  arrowGroup.addGroup(arrow);
-  arrow.add(arrowGroup);
-  arrowGroup.add();
   arrowGroup.add(arrow);
    
 }
